@@ -1,5 +1,4 @@
-package be.vamaralds.be.vamaralds.dynok
-
+import Property.Companion.property
 import arrow.core.Either
 import arrow.core.left
 import arrow.core.raise.either
@@ -132,9 +131,12 @@ data class DynObject(val type: ObjectType, val properties: PropertyMap = emptyMa
      * @param name The name of the property to add or update.
      * @param value The value of the property to add or update.
      * @return The new [DynObject] with the property added or updated.
+     * @throws [DynObjectError.UnsupportedPropertyType] if the type of the [value] is not supported.
      */
-    fun<T> set(name: PropertyName, value: T): DynObject =
-        copy(properties = properties.toMutableMap().apply { put(name, value as Any) }.toMap())
+    fun<T> set(name: PropertyName, value: T): Either<DynObjectError.UnsupportedPropertyType, DynObject> =
+        property(name, value).map {
+            copy(properties = properties.toMutableMap().apply { put(name, value as Any) }.toMap())
+        }
 
     /**
      * Serializes the [DynObject] into a JSON string. It is represented using a JSON with 2 fields: 'type' which represents the [type] of the object, and 'properties', a JSON object that represents the [properties] of the object.

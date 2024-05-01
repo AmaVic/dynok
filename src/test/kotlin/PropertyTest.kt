@@ -1,10 +1,5 @@
-package be.vamaralds.dynok
-
 import arrow.core.raise.either
-import be.vamaralds.be.vamaralds.dynok.DynObject
-import be.vamaralds.be.vamaralds.dynok.DynObjectError
-import be.vamaralds.be.vamaralds.dynok.Property
-import be.vamaralds.be.vamaralds.dynok.Property.Companion.property
+import Property.Companion.property
 import kotlin.test.Test
 import kotlin.test.fail
 

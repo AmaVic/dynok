@@ -1,22 +1,21 @@
-package be.vamaralds.dynok
-
 import arrow.core.raise.either
-import be.vamaralds.be.vamaralds.dynok.DynObject
-import be.vamaralds.be.vamaralds.dynok.DynObjectBuilder.Companion.newDynObject
+import DynObjectBuilder.Companion.newDynObject
 import kotlin.test.Test
 import kotlin.test.fail
 
 class DynObjectBuilderTest {
     @Test
     fun `Successfully create a valid DynObject`() {
-        val expectedObject = DynObject("Customer", mapOf(
-            "email" to "george@gmail.com",
-            "yearsOfService" to listOf(2020, 2021, 2022),
-            "premium" to true,
-            "discount" to 0.1f,
-            "longVal" to 3L,
-            "mainCompany" to DynObject("Company", mapOf("name" to "Main Corp"))
-        ))
+        val expectedObject = DynObject(
+            "Customer", mapOf(
+                "email" to "george@gmail.com",
+                "yearsOfService" to listOf(2020, 2021, 2022),
+                "premium" to true,
+                "discount" to 0.1f,
+                "longVal" to 3L,
+                "mainCompany" to DynObject("Company", mapOf("name" to "Main Corp"))
+            )
+        )
 
         either {
             newDynObject("Customer") {

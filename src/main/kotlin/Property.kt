@@ -1,5 +1,3 @@
-package be.vamaralds.be.vamaralds.dynok
-
 import arrow.core.Either
 import arrow.core.raise.either
 import arrow.core.raise.ensure
@@ -35,7 +33,12 @@ data class Property<T>(val name: PropertyName, val value: T) {
                         || value is List<*>
             ) { DynObjectError.UnsupportedPropertyType(name, value!!::class.simpleName ?: "Unknown") }
             if(value is List<*>) {
-                ensure(value.all { it is String || it is Int || it is Long || it is Float || it is Double || it is Boolean || it is DynObject }) { DynObjectError.UnsupportedPropertyType(name, "List of ${value.map { it!!::class.simpleName }.distinct().joinToString()}") }
+                ensure(value.all { it is String || it is Int || it is Long || it is Float || it is Double || it is Boolean || it is DynObject }) {
+                    DynObjectError.UnsupportedPropertyType(
+                        name,
+                        "List of ${value.map { it!!::class.simpleName }.distinct().joinToString()}"
+                    )
+                }
             }
             Property(name, value)
         }

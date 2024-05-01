@@ -1,7 +1,4 @@
-package be.vamaralds.dynok
-
 import arrow.core.raise.either
-import be.vamaralds.be.vamaralds.dynok.DynObject
 import org.json.JSONObject
 import kotlin.test.Test
 import kotlin.test.fail
@@ -10,11 +7,13 @@ class DynObjectTest {
     @Test
     fun `Successfully create a DynObject`() {
         either {
-            val customer = DynObject("Customer", mapOf(
-                "email" to "george@sunnyvale.com",
-                "premium" to true,
-                "id" to 0L,
-            ))
+            val customer = DynObject(
+                "Customer", mapOf(
+                    "email" to "george@sunnyvale.com",
+                    "premium" to true,
+                    "id" to 0L,
+                )
+            )
 
             assert(customer.type == "Customer") { "Expected type to be 'Customer', but it is ${customer.type}" }
             val email: String = customer.get<String>("email").bind()
@@ -41,35 +40,50 @@ class DynObjectTest {
     fun `Successfully set existing DynObject Property value`() {
         val dynObject = DynObject("Customer", mapOf("email" to "george@sunnyvale.com"))
         dynObject.set("email", "jim@sunnyvale.com")
-            .get<String>("email")
-            .map {
-                assert(it == "jim@sunnyvale.com") { "Expected email to be 'jim@sunnyvale.com', but it is $it)" }
-            }.mapLeft {
-                fail("Failed to set property value due to: $it")
+            .map { updatedObj ->
+                updatedObj.get<String>("email")
+                    .map {
+                        assert(it == "jim@sunnyvale.com") { "Expected email to be 'jim@sunnyvale.com', but it is $it)" }
+                    }.mapLeft {
+                        fail("Failed to set property value due to: $it")
+                    }
             }
+    }
+
+    @Test
+    fun `Fail to set property value (invalid type)`() {
+        val dynObject = DynObject("Customer", mapOf("email" to "george@gmail.com"))
+        dynObject.set("email", 1 to 2).map {
+            fail("Expected to fail to set property value, but it succeeded")
+        }
     }
 
     @Test
     fun `Successfully set new DynObject Property`() {
         val dynObject = DynObject("Customer", "premium" to true)
-        dynObject.set("email", "jim@sunnyvale.com")
-            .get<String>("email")
+        dynObject.set("email", "jim@sunnyvale.com").map { updatedObj ->
+            updatedObj.get<String>("email")
             .map {
                 assert(it == "jim@sunnyvale.com") { "Expected email to be 'jim@sunnyvale.com', but it is $it)" }
             }.mapLeft {
                 fail("Failed to set property value due to: $it")
             }
+        }
     }
 
     @Test
     fun `Successfully serialize a DynObject into JSON`() {
-        val dynObject = DynObject("Customer", mapOf(
-            "email" to "jim@tpb.com",
-            "premium" to true,
-            "company" to DynObject("Company", mapOf(
-                "name" to "Sunnyvale Trailer Park"
-            ))
-        ))
+        val dynObject = DynObject(
+            "Customer", mapOf(
+                "email" to "jim@tpb.com",
+                "premium" to true,
+                "company" to DynObject(
+                    "Company", mapOf(
+                        "name" to "Sunnyvale Trailer Park"
+                    )
+                )
+            )
+        )
 
         val jsonString = dynObject.toJson()
         val jsonObject = JSONObject(jsonString)

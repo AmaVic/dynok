@@ -1,5 +1,3 @@
-package be.vamaralds.be.vamaralds.dynok
-
 import arrow.core.Either
 import arrow.core.raise.either
 

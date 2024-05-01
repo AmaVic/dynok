@@ -2,6 +2,7 @@ $dokka.format:html-v1
 $dokka.linkExtension:html
 $dokka.location:be.vamaralds.be.vamaralds.dynok////PointingToDeclaration/dynok/be.vamaralds.be.vamaralds.dynok/index.html
 $dokka.location:be.vamaralds.be.vamaralds.dynok/DynObject.Companion///PointingToDeclaration/dynok/be.vamaralds.be.vamaralds.dynok/-dyn-object/-companion/index.html
+$dokka.location:be.vamaralds.be.vamaralds.dynok/DynObject.Companion/dynObject/#kotlin.String#kotlin.collections.Map[kotlin.String,kotlin.Any]/PointingToDeclaration/dynok/be.vamaralds.be.vamaralds.dynok/-dyn-object/-companion/dyn-object.html
 $dokka.location:be.vamaralds.be.vamaralds.dynok/DynObject.Companion/fromJson/#kotlin.String/PointingToDeclaration/dynok/be.vamaralds.be.vamaralds.dynok/-dyn-object/-companion/from-json.html
 $dokka.location:be.vamaralds.be.vamaralds.dynok/DynObject///PointingToDeclaration/dynok/be.vamaralds.be.vamaralds.dynok/-dyn-object/index.html
 $dokka.location:be.vamaralds.be.vamaralds.dynok/DynObject/DynObject/#kotlin.String#kotlin.Array[kotlin.Pair[kotlin.String,kotlin.Any]]/PointingToDeclaration/dynok/be.vamaralds.be.vamaralds.dynok/-dyn-object/-dyn-object.html
@@ -11,21 +12,26 @@ $dokka.location:be.vamaralds.be.vamaralds.dynok/DynObject/properties/#/PointingT
 $dokka.location:be.vamaralds.be.vamaralds.dynok/DynObject/set/#kotlin.String#TypeParam(bounds=[kotlin.Any?])/PointingToDeclaration/dynok/be.vamaralds.be.vamaralds.dynok/-dyn-object/set.html
 $dokka.location:be.vamaralds.be.vamaralds.dynok/DynObject/toJson/#/PointingToDeclaration/dynok/be.vamaralds.be.vamaralds.dynok/-dyn-object/to-json.html
 $dokka.location:be.vamaralds.be.vamaralds.dynok/DynObject/type/#/PointingToDeclaration/dynok/be.vamaralds.be.vamaralds.dynok/-dyn-object/type.html
+$dokka.location:be.vamaralds.be.vamaralds.dynok/DynObjectBuilder.Companion///PointingToDeclaration/dynok/be.vamaralds.be.vamaralds.dynok/-dyn-object-builder/-companion/index.html
+$dokka.location:be.vamaralds.be.vamaralds.dynok/DynObjectBuilder.Companion/newDynObject/#kotlin.String#kotlin.Function1[be.vamaralds.be.vamaralds.dynok.DynObjectBuilder,kotlin.Unit]/PointingToDeclaration/dynok/be.vamaralds.be.vamaralds.dynok/-dyn-object-builder/-companion/new-dyn-object.html
+$dokka.location:be.vamaralds.be.vamaralds.dynok/DynObjectBuilder///PointingToDeclaration/dynok/be.vamaralds.be.vamaralds.dynok/-dyn-object-builder/index.html
+$dokka.location:be.vamaralds.be.vamaralds.dynok/DynObjectBuilder/DynObjectBuilder/#/PointingToDeclaration/dynok/be.vamaralds.be.vamaralds.dynok/-dyn-object-builder/-dyn-object-builder.html
+$dokka.location:be.vamaralds.be.vamaralds.dynok/DynObjectBuilder/property/#kotlin.String#kotlin.Any/PointingToDeclaration/dynok/be.vamaralds.be.vamaralds.dynok/-dyn-object-builder/property.html
 $dokka.location:be.vamaralds.be.vamaralds.dynok/DynObjectError.InvalidCastError///PointingToDeclaration/dynok/be.vamaralds.be.vamaralds.dynok/-dyn-object-error/-invalid-cast-error/index.html
 $dokka.location:be.vamaralds.be.vamaralds.dynok/DynObjectError.InvalidCastError/InvalidCastError/#kotlin.String/PointingToDeclaration/dynok/be.vamaralds.be.vamaralds.dynok/-dyn-object-error/-invalid-cast-error/-invalid-cast-error.html
 $dokka.location:be.vamaralds.be.vamaralds.dynok/DynObjectError.PropertyNotFoundError///PointingToDeclaration/dynok/be.vamaralds.be.vamaralds.dynok/-dyn-object-error/-property-not-found-error/index.html
 $dokka.location:be.vamaralds.be.vamaralds.dynok/DynObjectError.PropertyNotFoundError/PropertyNotFoundError/#kotlin.String/PointingToDeclaration/dynok/be.vamaralds.be.vamaralds.dynok/-dyn-object-error/-property-not-found-error/-property-not-found-error.html
 $dokka.location:be.vamaralds.be.vamaralds.dynok/DynObjectError.SerializationError///PointingToDeclaration/dynok/be.vamaralds.be.vamaralds.dynok/-dyn-object-error/-serialization-error/index.html
 $dokka.location:be.vamaralds.be.vamaralds.dynok/DynObjectError.SerializationError/SerializationError/#kotlin.String/PointingToDeclaration/dynok/be.vamaralds.be.vamaralds.dynok/-dyn-object-error/-serialization-error/-serialization-error.html
+$dokka.location:be.vamaralds.be.vamaralds.dynok/DynObjectError.UnsupportedPropertyType///PointingToDeclaration/dynok/be.vamaralds.be.vamaralds.dynok/-dyn-object-error/-unsupported-property-type/index.html
+$dokka.location:be.vamaralds.be.vamaralds.dynok/DynObjectError.UnsupportedPropertyType/UnsupportedPropertyType/#kotlin.String#kotlin.String/PointingToDeclaration/dynok/be.vamaralds.be.vamaralds.dynok/-dyn-object-error/-unsupported-property-type/-unsupported-property-type.html
 $dokka.location:be.vamaralds.be.vamaralds.dynok/DynObjectError///PointingToDeclaration/dynok/be.vamaralds.be.vamaralds.dynok/-dyn-object-error/index.html
 $dokka.location:be.vamaralds.be.vamaralds.dynok/Property.Companion///PointingToDeclaration/dynok/be.vamaralds.be.vamaralds.dynok/-property/-companion/index.html
 $dokka.location:be.vamaralds.be.vamaralds.dynok/Property.Companion/fromAny/#kotlin.Any/PointingToDeclaration/dynok/be.vamaralds.be.vamaralds.dynok/-property/-companion/from-any.html
+$dokka.location:be.vamaralds.be.vamaralds.dynok/Property.Companion/property/#kotlin.String#TypeParam(bounds=[kotlin.Any?])/PointingToDeclaration/dynok/be.vamaralds.be.vamaralds.dynok/-property/-companion/property.html
 $dokka.location:be.vamaralds.be.vamaralds.dynok/Property///PointingToDeclaration/dynok/be.vamaralds.be.vamaralds.dynok/-property/index.html
 $dokka.location:be.vamaralds.be.vamaralds.dynok/Property/Property/#kotlin.String#TypeParam(bounds=[kotlin.Any?])/PointingToDeclaration/dynok/be.vamaralds.be.vamaralds.dynok/-property/-property.html
 $dokka.location:be.vamaralds.be.vamaralds.dynok/Property/name/#/PointingToDeclaration/dynok/be.vamaralds.be.vamaralds.dynok/-property/name.html
 $dokka.location:be.vamaralds.be.vamaralds.dynok/Property/value/#/PointingToDeclaration/dynok/be.vamaralds.be.vamaralds.dynok/-property/value.html
-$dokka.location:be.vamaralds////PointingToDeclaration/dynok/be.vamaralds/index.html
-$dokka.location:be.vamaralds//main/#/PointingToDeclaration/dynok/be.vamaralds/main.html
-be.vamaralds
 be.vamaralds.be.vamaralds.dynok
 
